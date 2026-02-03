@@ -1,3 +1,5 @@
+import { login } from "@/lib/auth";
+
 export default function SignInPage() {
   return (
     <div className="min-h-[calc(100vh-10rem)] flex items-center justify-center ">
@@ -11,7 +13,7 @@ export default function SignInPage() {
           </p>
         </div>
         <div className="mt-8">
-          <button className="w-full flex items-center justify-center gap-3 px-4 py-3 border border-gray-300 rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200">
+          <button onClick={login} className="w-full flex items-center justify-center gap-3 px-4 py-3 border border-gray-300 rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200">
             <svg
               className="w-6 h-6"
               fill="currentColor"
@@ -29,8 +31,14 @@ export default function SignInPage() {
         </div>
         <div className="mt-6 text-center text-sm text-gray-500">
           By signing in you agree to our{" "}
-          <a href="#" className="text-indigo-600 hover:text-indigo-500">Terms of service  </a> {" "} and 
-          <a href="#" className="text-indigo-600 hover:text-indigo-500"> Privacy policy</a>
+          <a href="#" className="text-indigo-600 hover:text-indigo-500">
+            Terms of service{" "}
+          </a>{" "}
+          and
+          <a href="#" className="text-indigo-600 hover:text-indigo-500">
+            {" "}
+            Privacy policy
+          </a>
         </div>
       </div>
     </div>
